@@ -245,7 +245,7 @@ claude
 
 Claude Code의 기본 동작 방식을 익혔다면, 다음 주제로 학습을 이어갈 수 있다.
 
-**필수 명령어 익히기**: `/help`, `/clear`, `/cost` 등 Claude Code 내장 명령어와 CLAUDE.md 설정 파일 활용법을 다룬다.
+**필수 명령어 익히기**: `/help`, `/clear`, `/compact` 등 Claude Code 내장 명령어와 CLAUDE.md 설정 파일 활용법을 다룬다.
 [Claude Code 필수 명령어 가이드](/posts/claude-code/claude-code-essential-commands/)
 
 **프로젝트 셋업**: 새 프로젝트 또는 기존 프로젝트에 Claude Code를 통합하는 방법, `.claude/settings.json` 심화 설정, CLAUDE.md로 에이전트에게 프로젝트 컨텍스트 전달하는 방법을 다룬다.
