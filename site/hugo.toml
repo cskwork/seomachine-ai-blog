@@ -52,6 +52,12 @@ paginate = 10
   home = ["HTML", "RSS", "JSON"]
 
 [[menus.main]]
+  identifier = "claude-code-guide"
+  name = "Claude Code"
+  url = "/posts/claude-code/"
+  weight = 3
+
+[[menus.main]]
   name = "Archive"
   url = "/archives/"
   weight = 5
