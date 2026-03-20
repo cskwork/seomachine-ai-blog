@@ -3,7 +3,9 @@
 Use this command to review and analyze existing your company blog posts for SEO opportunities, content gaps, and improvement areas.
 
 ## Usage
-`/analyze-existing [URL or file path]`
+`/analyze-existing [slug]`
+
+`site/content/posts/[slug].md` 파일을 대상으로 분석합니다.
 
 ## What This Command Does
 1. Fetches and analyzes existing blog post content
@@ -103,7 +105,7 @@ If a rewrite is recommended, provide initial research brief including:
 
 ## File Management
 After completing the analysis, automatically save the report to:
-- **File Location**: `research/analysis-[post-slug]-[YYYY-MM-DD].md`
+- **File Location**: `drafts/reports/[slug]/analysis-report.md`
 - **File Format**: Markdown with scores, recommendations, and action items
 - **Naming Convention**: Use lowercase, hyphenated post slug and current date
 
@@ -111,8 +113,8 @@ Example: `research/analysis-podcast-hosting-guide-2025-10-15.md`
 
 ## Next Steps
 Based on the analysis, the system will suggest:
-1. Running `/rewrite [topic]` if content needs significant updates
-2. Running `/optimize [file]` if content needs light SEO polish
-3. Archiving the post if it's no longer relevant or valuable
+1. 대폭 수정 필요: 직접 `site/content/posts/[slug].md` 편집 후 `/optimize [slug]` 실행
+2. 경량 최적화: `/optimize [slug]` 실행
+3. 발행 가능 상태: `/publish [slug]` 실행
 
 This ensures every analysis leads to clear, actionable next steps for improving your company blog content.

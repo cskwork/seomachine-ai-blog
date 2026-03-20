@@ -87,15 +87,15 @@ Don't just put one CTA at the end. Embedded CTAs get 121% more conversions than 
 **CTA Placement Strategy:**
 | Location | CTA Type | Example |
 |----------|----------|---------|
-| After first major value section | Soft CTA (learn more) | "Want to see how this works in practice? [Explore our features →]" |
-| After comparison/proof section | Medium CTA (try it) | "**Ready to test the difference?** Start a free trial, no credit card required." |
-| End of article | Strong CTA (convert) | "**[Start Your Free Trial →]**" with supporting text |
+| After first major value section | Soft CTA (learn more) | "이 주제에 대해 더 알아보기: [관련 글 제목](/posts/related-slug/)" |
+| After comparison/proof section | Medium CTA (deep dive) | "**더 깊이 알아보고 싶다면** [심화 가이드](/posts/deep-dive-slug/)를 참고하세요." |
+| End of article | Strong CTA (next step) | "**다음 단계로:** [실전 튜토리얼](/posts/tutorial-slug/)에서 직접 따라해 보세요." |
 
 **CTA Rules:**
-- Make CTAs contextual (relate to the section content)
-- Vary the format (inline text, bold callout, button-style)
-- First CTA should appear within the first 500 words
-- Never use generic "Click here" text
+- 관련 블로그 글 링크로 CTA 구성 (예: "이 주제에 대해 더 알아보기: [관련 글 제목](/posts/related-slug/)")
+- context/internal-links-map.md 참조하여 적절한 내부 링크 활용
+- 외부 도구/리소스 안내도 CTA로 활용 가능
+- "Click here" 대신 설명적 앵커 텍스트 사용
 
 #### 4. Conclusion (150-200 words)
 - **Recap**: Summarize 3-5 key takeaways
@@ -149,31 +149,36 @@ Don't just put one CTA at the end. Embedded CTAs get 121% more conversions than 
 - Match tone to content type (how-to, strategy, news, etc.)
 
 ## Output
-Provides a complete, publish-ready article including:
+Provides a complete Hugo blog post including:
 
 ### 1. Article Content
-Full markdown-formatted article with:
-- H1 headline
-- Introduction
-- Body sections with H2/H3 structure
-- Conclusion with CTA
-- Proper formatting and styling
+Hugo frontmatter + 본문 마크다운:
 
-### 2. Meta Elements
-```
+```yaml
 ---
-Meta Title: [50-60 character optimized title]
-Meta Description: [150-160 character compelling description]
-Primary Keyword: [main target keyword]
-Secondary Keywords: [keyword1, keyword2, keyword3]
-URL Slug: /blog/[optimized-slug]
-Internal Links: [list of pages linked from your site]
-External Links: [list of external sources]
-Word Count: [actual word count]
+title: "[H1 제목]"
+date: [YYYY-MM-DD]
+draft: true
+tags: ["태그1", "태그2", "태그3"]
+categories: ["카테고리"]
+description: "[메타 설명 150-160자]"
+summary: "[목록 표시용 요약 1-2문장]"
+slug: "[영문-슬러그]"
+ShowToc: true
+TocOpen: true
+seo:
+  primary_keyword: "[주요 키워드]"
+  secondary_keywords: ["부가1", "부가2", "부가3"]
+  word_count: [실제 단어 수]
+  quality_score: 0
+  last_optimized: null
+  review_required: false
 ---
+
+[본문 마크다운]
 ```
 
-### 3. SEO Checklist
+### 2. SEO Checklist
 - [ ] Primary keyword in H1
 - [ ] Primary keyword in first 100 words
 - [ ] Primary keyword in 2+ H2 headings
@@ -197,11 +202,12 @@ Word Count: [actual word count]
 
 ## File Management
 After completing the article, automatically save to:
-- **File Location**: `drafts/[topic-slug]-[YYYY-MM-DD].md`
-- **File Format**: Markdown with frontmatter and formatted content
-- **Naming Convention**: Use lowercase, hyphenated topic slug and current date
+- **File Location**: `site/content/posts/[slug].md`
+- **File Format**: Hugo frontmatter (YAML) + 마크다운 본문
+- **Naming Convention**: slug만 사용 (날짜는 frontmatter에 포함)
+- **Draft Status**: 항상 `draft: true`로 생성 (/publish로 발행)
 
-Example: `drafts/content-marketing-strategies-2025-10-15.md`
+Example: `site/content/posts/ai-agent-trends-2026.md`
 
 ## Automatic Content Scrubbing
 
@@ -245,7 +251,7 @@ After saving the main article, immediately execute optimization agents:
 - **Agent**: `content-analyzer`
 - **Input**: Full article, meta elements, keywords, SERP data (if available)
 - **Output**: Comprehensive analysis covering search intent, keyword density, content length comparison, readability score, and SEO quality rating
-- **File**: `drafts/content-analysis-[topic-slug]-[YYYY-MM-DD].md`
+- **File**: `drafts/reports/[slug]/content-analysis.md`
 
 This new agent uses 5 specialized analysis modules:
 - Search intent analysis
@@ -258,25 +264,25 @@ This new agent uses 5 specialized analysis modules:
 - **Agent**: `seo-optimizer`
 - **Input**: Full article content
 - **Output**: SEO optimization report and suggestions
-- **File**: `drafts/seo-report-[topic-slug]-[YYYY-MM-DD].md`
+- **File**: `drafts/reports/[slug]/seo-report.md`
 
 ### 3. Meta Creator Agent
 - **Agent**: `meta-creator`
 - **Input**: Article content and primary keyword
 - **Output**: Multiple meta title/description options
-- **File**: `drafts/meta-options-[topic-slug]-[YYYY-MM-DD].md`
+- **File**: `drafts/reports/[slug]/meta-options.md`
 
 ### 4. Internal Linker Agent
 - **Agent**: `internal-linker`
 - **Input**: Article content
 - **Output**: Specific internal linking recommendations
-- **File**: `drafts/link-suggestions-[topic-slug]-[YYYY-MM-DD].md`
+- **File**: `drafts/reports/[slug]/link-suggestions.md`
 
 ### 5. Keyword Mapper Agent
 - **Agent**: `keyword-mapper`
 - **Input**: Article and target keywords
 - **Output**: Keyword placement analysis and improvements
-- **File**: `drafts/keyword-analysis-[topic-slug]-[YYYY-MM-DD].md`
+- **File**: `drafts/reports/[slug]/keyword-analysis.md`
 
 ## Automatic Quality Loop
 
@@ -307,22 +313,8 @@ If composite score < 70:
 4. Repeat once more if still below threshold
 
 ### Step 4: Route Based on Final Score
-- **Score ≥ 70**: Save to `drafts/` and proceed to optimization agents
-- **Score < 70 after 2 iterations**: Save to `review-required/` with a `_REVIEW_NOTES.md` file containing the scoring details and remaining issues
-
-### Review-Required Folder
-Articles that fail quality threshold after 2 revision attempts go to `review-required/`:
-```
-review-required/
-├── article-name-2025-12-10.md
-└── article-name-2025-12-10_REVIEW_NOTES.md
-```
-
-The `_REVIEW_NOTES.md` file contains:
-- Final composite score
-- Dimension breakdown
-- Remaining priority fixes
-- Reason for human review
+- **Score >= 70**: frontmatter에 `seo.quality_score` 기록, `/publish` 가능
+- **Score < 70 after 2 iterations**: frontmatter에 `seo.review_required: true` 설정, 수동 편집 후 `/optimize` 실행 권고
 
 ## Quality Standards
 Every article must meet these requirements:

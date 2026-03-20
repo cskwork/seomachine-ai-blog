@@ -8,6 +8,13 @@ description: "Model Context Protocol(MCP)의 개념, 아키텍처, 실무 활용
 summary: "MCP는 LLM과 외부 시스템 간의 통신을 표준화하는 프로토콜입니다. 개념부터 구현까지 살펴봅니다."
 ShowToc: true
 TocOpen: true
+seo:
+  primary_keyword: "MCP"
+  secondary_keywords: ["프로토콜", "도구 통합"]
+  word_count: 600
+  quality_score: 0
+  last_optimized: null
+  review_required: false
 ---
 
 ## MCP란 무엇인가

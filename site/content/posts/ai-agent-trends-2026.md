@@ -8,6 +8,13 @@ description: "2026년 AI 에이전트 기술의 주요 트렌드와 실무에서
 summary: "AI 에이전트 기술이 실무에 본격 도입되고 있습니다. 2026년 주요 트렌드와 활용 전략을 살펴봅니다."
 ShowToc: true
 TocOpen: true
+seo:
+  primary_keyword: "AI 에이전트"
+  secondary_keywords: ["멀티 에이전트", "코드 에이전트"]
+  word_count: 450
+  quality_score: 0
+  last_optimized: null
+  review_required: false
 ---
 
 ## AI 에이전트란 무엇인가

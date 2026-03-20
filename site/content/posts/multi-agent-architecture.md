@@ -8,6 +8,13 @@ description: "멀티 에이전트 시스템의 주요 아키텍처 패턴을 분
 summary: "단일 에이전트의 한계를 넘어, 여러 전문 에이전트가 협업하는 시스템을 설계하는 방법을 살펴봅니다."
 ShowToc: true
 TocOpen: true
+seo:
+  primary_keyword: "멀티 에이전트"
+  secondary_keywords: ["오케스트레이션", "파이프라인"]
+  word_count: 750
+  quality_score: 0
+  last_optimized: null
+  review_required: false
 ---
 
 ## 왜 멀티 에이전트인가

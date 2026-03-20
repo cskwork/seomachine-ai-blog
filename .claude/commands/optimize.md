@@ -3,7 +3,7 @@
 Use this command to perform a final SEO optimization pass on completed articles before publishing.
 
 ## Usage
-`/optimize [article file]`
+`/optimize [slug]`
 
 ## What This Command Does
 1. Performs comprehensive SEO audit of article
@@ -232,15 +232,15 @@ Visual representation of where primary keyword appears:
 **Next Steps**:
 1. [Specific action needed]
 2. [Specific action needed]
-3. Move to `/published` folder when complete
+3. `/publish [slug]` 명령어로 발행
 
 ## File Management
 After optimization analysis, save report to:
-- **File Location**: `drafts/optimization-report-[topic-slug]-[YYYY-MM-DD].md`
+- **File Location**: `drafts/reports/[slug]/optimization-report.md`
 - **File Format**: Markdown with scores, checklists, and recommendations
-- **Naming Convention**: Use article slug + "optimization-report" + date
+- **Naming Convention**: slug 디렉토리 내 optimization-report.md
 
-Example: `drafts/optimization-report-podcast-analytics-2025-10-15.md`
+Example: `drafts/reports/ai-agent-trends-2026/optimization-report.md`
 
 ## Integration with Agents
 The `/optimize` command triggers final review from all agents:
@@ -258,11 +258,21 @@ The optimize command now includes advanced SEO analysis:
 - **Readability Score**: Flesch Reading Ease, Flesch-Kincaid Grade Level, sentence structure analysis
 - **SEO Quality Rating**: Overall score (0-100) with category breakdowns and specific recommendations
 
+## Frontmatter Update
+After optimization, update the article's frontmatter:
+- `seo.quality_score`: 최종 SEO 점수 (0-100)
+- `seo.last_optimized`: 현재 날짜 (YYYY-MM-DD)
+- `seo.review_required`: 점수 70 미만이면 true, 이상이면 false
+
+## Quality Gate
+- **70+**: "/publish [slug] 명령어로 발행할 수 있습니다" 안내
+- **<70**: "품질 점수가 기준 미달입니다. 리포트의 priority_fixes를 참고하여 수정 후 다시 /optimize를 실행하세요" 안내
+
 ## Publishing Decision
 Based on optimization score:
-- **90-100**: Excellent - publish immediately
-- **80-89**: Good - minor tweaks recommended but publishable
-- **70-79**: Fair - address priority fixes before publishing
-- **Below 70**: Needs work - significant improvements required
+- **90-100**: Excellent - `/publish [slug]`로 즉시 발행
+- **80-89**: Good - 경미한 수정 후 `/publish [slug]` 실행
+- **70-79**: Fair - priority fixes 해결 후 `/publish [slug]` 실행
+- **Below 70**: Needs work - 수정 후 `/optimize [slug]` 재실행 필요
 
-This ensures every article meets your company quality standards and SEO best practices before going live.
+This ensures every article meets quality standards and SEO best practices before going live.

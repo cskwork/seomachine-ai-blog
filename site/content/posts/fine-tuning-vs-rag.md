@@ -8,6 +8,13 @@ description: "파인튜닝과 RAG의 차이점을 원리, 비용, 성능, 사용
 summary: "LLM을 특정 도메인에 맞게 활용하려면 파인튜닝과 RAG 중 무엇을 선택해야 할까요? 두 접근법을 체계적으로 비교합니다."
 ShowToc: true
 TocOpen: true
+seo:
+  primary_keyword: "파인튜닝 vs RAG"
+  secondary_keywords: ["모델 커스터마이징", "LLM"]
+  word_count: 750
+  quality_score: 0
+  last_optimized: null
+  review_required: false
 ---
 
 ## 문제 정의

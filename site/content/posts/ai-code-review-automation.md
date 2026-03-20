@@ -8,6 +8,13 @@ description: "AI를 활용한 코드 리뷰 자동화의 구현 방법과 실무
 summary: "AI 코드 리뷰를 개발 파이프라인에 통합하여 코드 품질을 향상시키는 실무 전략을 소개합니다."
 ShowToc: true
 TocOpen: true
+seo:
+  primary_keyword: "코드 리뷰 자동화"
+  secondary_keywords: ["CI/CD", "자동화"]
+  word_count: 750
+  quality_score: 0
+  last_optimized: null
+  review_required: false
 ---
 
 ## AI 코드 리뷰의 현주소
