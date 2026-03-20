@@ -1,0 +1,67 @@
+baseURL = "https://example.github.io/seomachine-ai-blog/"
+languageCode = "ko"
+title = "AI Insights Lab"
+theme = "PaperMod"
+paginate = 10
+
+[params]
+  env = "production"
+  description = "AI 기술 동향과 실무 활용 인사이트를 제공하는 블로그"
+  author = "AI Insights Lab"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecialCharHyphenation = true
+
+  [params.homeInfoParams]
+    Title = "AI Insights Lab"
+    Content = "AI 에이전트, LLM, 프롬프트 엔지니어링에 대한 실무 중심 인사이트를 제공합니다."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/"
+
+[params.assets]
+  favicon = "/favicon.ico"
+
+[params.cover]
+  hidden = false
+  hiddenInList = false
+  hiddenInSingle = false
+
+[params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1000
+  threshold = 0.4
+  minMatchCharLength = 0
+  keys = ["title", "permalink", "summary", "content"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[[menus.main]]
+  name = "Archive"
+  url = "/archives/"
+  weight = 5
+
+[[menus.main]]
+  name = "Search"
+  url = "/search/"
+  weight = 10
+
+[[menus.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 15
