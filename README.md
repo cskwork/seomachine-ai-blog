@@ -1,4 +1,45 @@
-# SEO Machine
+# AI Insights Lab - SEO Machine Demo
+
+> **AI 기술 동향과 실무 활용 인사이트를 제공하는 데모 블로그**
+>
+> 이 프로젝트는 [SEO Machine](https://github.com/TheCraigHewitt/seomachine)을 기반으로 Hugo + PaperMod 테마를 결합한 AI 블로그 데모입니다.
+
+## Hugo 블로그 실행
+
+```bash
+# 로컬 개발 서버
+cd site
+hugo server -D
+
+# 프로덕션 빌드
+cd site
+hugo --minify
+```
+
+- 로컬 서버: http://localhost:1313
+- 테마: [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
+- 배포: GitHub Actions -> GitHub Pages
+
+## 프로젝트 구조
+
+```
+seomachine-ai-blog/
+├── site/                    # Hugo 사이트
+│   ├── hugo.toml           # Hugo 설정
+│   ├── content/            # 블로그 콘텐츠
+│   │   ├── posts/          # 블로그 글
+│   │   ├── search.md       # 검색 페이지
+│   │   └── archives.md     # 아카이브 페이지
+│   └── themes/PaperMod/    # PaperMod 테마 (서브모듈)
+├── context/                 # SEO Machine 컨텍스트 (AI 블로그 맞춤)
+├── .claude/                 # Claude Code 명령어 및 에이전트
+├── .github/workflows/       # GitHub Actions 배포
+└── data_sources/            # Python 분석 모듈
+```
+
+---
+
+# SEO Machine (원본 문서)
 
 A specialized Claude Code workspace for creating long-form, SEO-optimized blog content for any business. This system helps you research, write, analyze, and optimize content that ranks well and serves your target audience.
 
