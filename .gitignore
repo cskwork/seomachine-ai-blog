@@ -131,3 +131,6 @@ target/
 vendor/
 coverage/
 .cache/
+
+# ── GSD baseline (auto-generated) ──
+.gsd

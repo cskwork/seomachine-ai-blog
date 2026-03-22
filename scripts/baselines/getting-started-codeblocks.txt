@@ -1,0 +1,80 @@
+```bash
+node --version
+```
+```bash
+nvm install --lts
+nvm use --lts
+```
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+```bash
+claude --version
+```
+```bash
+claude
+```
+```bash
+export ANTHROPIC_API_KEY="sk-ant-..."
+```
+```
+Claude Code  (type /help for help)
+
+>
+```
+```bash
+cd ~/my-project
+claude
+```
+```
+이 프로젝트의 구조를 설명해줘
+```
+```
+README.md를 읽고 이 프로젝트가 무엇인지 한 문단으로 요약해줘
+```
+```
+새 파일 hello.py를 만들어줘. "Hello, Claude Code!"를 출력하는 간단한 스크립트야.
+```
+```
+Claude wants to write to: hello.py
+
+  print("Hello, Claude Code!")
+
+Allow? [Y/n/d/?]
+```
+```bash
+python hello.py
+# Hello, Claude Code!
+```
+```json
+{
+  "allowedTools": [
+    "Read",
+    "Write",
+    "Bash(npm run test:*)",
+    "Bash(git status)",
+    "Bash(git diff)"
+  ]
+}
+```
+```bash
+# 잘못된 방식
+cd ~
+claude
+# "~/my-project/src/app.py를 수정해줘"
+```
+```bash
+# 올바른 방식
+cd ~/my-project
+claude
+```
+```
+# 한 번에 요청 (비추천)
+"이 프로젝트에 JWT 기반 사용자 인증 기능을 추가해줘"
+
+# 단계별 요청 (추천)
+1. "현재 프로젝트에 어떤 인증 관련 코드가 있는지 파악해줘"
+2. "JWT 라이브러리를 설치하고 기본 설정 파일을 만들어줘"
+3. "로그인 엔드포인트를 구현해줘. 이메일/비밀번호 방식으로"
+4. "토큰 검증 미들웨어를 추가해줘"
+```

@@ -18,7 +18,7 @@ This file is the explicit capability and coverage contract for the project.
 ### R002 — SEO Optimization for "공부 동기부여 방법"
 - Class: quality-attribute
 - Status: active
-- Description: 주요 키워드 "공부 동기부여 방법" 및 부가 키워드(공부 의욕 없을때, 도파민 공부법, 66일 습관 등) SEO 최적화
+- Description: 주요 키워드 "공부 동기부여 방법" 및 부가 키워드 SEO 최적화
 - Why it matters: 검색 유입을 위한 필수 조건
 - Source: user
 - Primary owning slice: M001/S01
@@ -29,13 +29,13 @@ This file is the explicit capability and coverage contract for the project.
 ### R003 — Science-Backed Content with Research Citations
 - Class: differentiator
 - Status: active
-- Description: 뇌과학(도파민 보상 시스템, Nature 2026 연구)과 심리학(SDT 메타분석, 포모도로 리뷰) 연구 데이터 인용
+- Description: 뇌과학과 심리학 연구 데이터 인용
 - Why it matters: 감정적 팩폭 중심 경쟁 콘텐츠와 차별화하는 핵심 전략
 - Source: user
 - Primary owning slice: M001/S01
 - Supporting slices: none
 - Validation: mapped
-- Notes: 127개 연구/77,560명 메타분석, r=0.72 포모도로, 66일 습관 등 구체적 수치
+- Notes: 127개 연구/77,560명 메타분석 등 구체적 수치
 
 ### R004 — Hugo Frontmatter Format Compliance
 - Class: constraint
@@ -44,47 +44,47 @@ This file is the explicit capability and coverage contract for the project.
 - Why it matters: 블로그 빌드 및 발행 호환성
 - Source: inferred
 - Primary owning slice: M001/S01
-- Supporting slices: none
+- Supporting slices: M002/S01~S05
 - Validation: mapped
 - Notes: title, date, draft, tags, categories, description, summary, ShowToc, seo 필드 포함
 
 ### R005 — Brand Voice Compliance
 - Class: quality-attribute
 - Status: active
-- Description: AI Insights Lab 브랜드 보이스 준수 (경어체, 사실 기반, 기술 용어 영문 유지, 과장 없음)
+- Description: AI Insights Lab 브랜드 보이스 준수 — M002에서 "실력 있는 선배" 톤으로 업데이트
 - Why it matters: 블로그 정체성과 일관성 유지
 - Source: inferred
 - Primary owning slice: M001/S01
-- Supporting slices: none
+- Supporting slices: M002/S01
 - Validation: mapped
-- Notes: 이모지 미사용, 감정적 과장 배제, 첫 등장 시 영문 기술 용어에 한국어 설명 병기
+- Notes: 이모지 미사용, 감정적 과장 배제. M002에서 톤 가이드 재정의
 
 ### R006 — Contextual CTAs with Internal Links (2-3개)
 - Class: primary-user-loop
 - Status: active
-- Description: 프롬프트 엔지니어링 가이드, SEO 콘텐츠 전략 등 기존 포스트로의 내부 링크 CTA 2-3개 배치
+- Description: 기존 포스트로의 내부 링크 CTA 2-3개 배치
 - Why it matters: 내부 링크 SEO 가치 및 독자 체류 시간 증가
 - Source: inferred
 - Primary owning slice: M001/S01
 - Supporting slices: none
 - Validation: mapped
-- Notes: 체계적 접근법, 시스템적 사고 맥락에서 자연스럽게 연결
+- Notes: 체계적 접근법 맥락에서 자연스럽게 연결
 
 ### R007 — Korean-Context Mini-Stories (2-3개)
 - Class: quality-attribute
 - Status: active
-- Description: 한국 상황(수능, 자격증, 직장인 자기계발 등) 기반 미니스토리 2-3개 포함
-- Why it matters: 한국 독자 공감대 형성 및 /write 명령어 engagement 요건 충족
+- Description: 한국 상황 기반 미니스토리 2-3개 포함
+- Why it matters: 한국 독자 공감대 형성
 - Source: user
 - Primary owning slice: M001/S01
 - Supporting slices: none
 - Validation: mapped
-- Notes: 한국 이름 사용, 구체적 상황과 결과 포함 (50-150단어 각)
+- Notes: 한국 이름 사용, 구체적 상황과 결과 포함
 
 ### R008 — Image Placeholders
 - Class: launchability
 - Status: active
-- Description: 도파민 보상 루프 다이어그램, 66일 타임라인 등 인포그래픽 위치에 [image: 설명] 형태 플레이스홀더 삽입
+- Description: 인포그래픽 위치에 [image: 설명] 형태 플레이스홀더 삽입
 - Why it matters: 발행 시 시각 자료 추가 작업을 위한 가이드
 - Source: user
 - Primary owning slice: M001/S01
@@ -101,18 +101,18 @@ This file is the explicit capability and coverage contract for the project.
 - Primary owning slice: M001/S02
 - Supporting slices: none
 - Validation: mapped
-- Notes: Humanity 30%, Specificity 25%, Structure 20%, SEO 15%, Readability 10%
+- Notes: Korean scorer limitations apply (K002, K003)
 
 ### R010 — AI Watermark Scrubbing
 - Class: quality-attribute
 - Status: active
-- Description: /scrub 명령어로 AI 워터마크 및 텔테일 패턴 제거
+- Description: AI 워터마크 및 텔테일 패턴 제거
 - Why it matters: AI 생성 콘텐츠 표식 제거
 - Source: inferred
 - Primary owning slice: M001/S02
 - Supporting slices: none
 - Validation: mapped
-- Notes: 유니코드 워터마크, em-dash 변환, 포맷 제어 문자 제거
+- Notes: 유니코드 워터마크, em-dash 변환 등
 
 ### R011 — Optimization Agent Reports
 - Class: operability
@@ -123,7 +123,84 @@ This file is the explicit capability and coverage contract for the project.
 - Primary owning slice: M001/S02
 - Supporting slices: none
 - Validation: mapped
-- Notes: drafts/reports/study-motivation-scientific-methods/ 디렉토리에 저장
+- Notes: drafts/reports/ 디렉토리에 저장
+
+### R012 — 통일된 블로그 목소리
+- Class: core-capability
+- Status: active
+- Description: 28개 글 전체가 "실력 있는 선배" 경어체로 통일. 자신감 있고 단정적인 톤. 구어적 전환점 적절히 삽입
+- Why it matters: 블로그 전체 정체성 확립. 글마다 다른 톤이면 브랜드 인지 불가
+- Source: user
+- Primary owning slice: M002/S01
+- Supporting slices: M002/S02, M002/S03, M002/S04, M002/S05
+- Validation: mapped
+- Notes: brand-voice.md, style-guide.md 업데이트 포함
+
+### R013 — 자연스러운 한국어
+- Class: quality-attribute
+- Status: active
+- Description: 문법/맞춤법 오류, AI 생성 냄새 나는 어색한 표현, 기계적 반복 패턴 모두 교정
+- Why it matters: 독자가 AI 글이라고 느끼는 순간 이탈. 자연스러운 한국어가 체류시간의 기본
+- Source: user
+- Primary owning slice: M002/S02
+- Supporting slices: M002/S03, M002/S04, M002/S05
+- Validation: mapped
+- Notes: "~합니다" "~입니다" 단순 반복, "스스로" 같은 오타, "살펴봅니다" 도입부 패턴
+
+### R014 — 독자 참여형 구조
+- Class: primary-user-loop
+- Status: active
+- Description: 네이버 인기 블로그 패턴 — 흥미 유발 도입부, 핵심 요약, 독자에게 던지는 질문, 섹션 연결 문장, 행동 유도 결론
+- Why it matters: 읽히지 않는 글은 SEO 점수와 무관하게 가치 없음. 구조가 스크롤을 만듦
+- Source: user
+- Primary owning slice: M002/S01
+- Supporting slices: M002/S02, M002/S03, M002/S04
+- Validation: mapped
+- Notes: 기계적 나열 → 서사적 흐름. 섹션 사이 연결 문장 필수
+
+### R015 — SEO 메타 품질
+- Class: quality-attribute
+- Status: active
+- Description: frontmatter title, description이 새 톤에 맞게 자연스럽고 클릭 유도. slug/date/tags는 유지
+- Why it matters: 검색 결과에서 제목과 설명이 첫 인상. 기계적 제목은 CTR 저하
+- Source: user
+- Primary owning slice: M002/S02
+- Supporting slices: M002/S03, M002/S04
+- Validation: mapped
+- Notes: frontmatter 수정 시 K001(YAML 인덴테이션 붕괴) 주의
+
+### R016 — 기술 정확성 보존
+- Class: constraint
+- Status: active
+- Description: 코드 블록, API 예시, 기술 비교 테이블, 수치 데이터 정확성 보존. 기술 블로그 정체성 훼손 금지
+- Why it matters: 톤 개선하다 코드 예시 깨뜨리면 본말전도
+- Source: user
+- Primary owning slice: M002/S02
+- Supporting slices: M002/S03, M002/S04
+- Validation: mapped
+- Notes: 코드 블록 내용 변경 금지. 가벼운 수다, 자신감 없는 표현 금지
+
+### R017 — 브랜드 가이드 정합성
+- Class: quality-attribute
+- Status: active
+- Description: brand-voice.md, style-guide.md를 새 톤 기준에 맞게 업데이트
+- Why it matters: 가이드 문서가 실제 글과 불일치하면 향후 글 작성 시 혼란
+- Source: inferred
+- Primary owning slice: M002/S01
+- Supporting slices: none
+- Validation: mapped
+- Notes: M002/S01에서 톤 가이드와 함께 업데이트
+
+### R018 — 글간 일관성
+- Class: quality-attribute
+- Status: active
+- Description: 28개 글 전체에서 톤/구조/패턴이 일관되는지 최종 검증
+- Why it matters: 부분적으로 좋아도 전체가 어울리지 않으면 브랜드 경험 훼손
+- Source: user
+- Primary owning slice: M002/S05
+- Supporting slices: none
+- Validation: mapped
+- Notes: S05에서 전체 QA 수행
 
 ## Validated
 
@@ -144,18 +221,25 @@ This file is the explicit capability and coverage contract for the project.
 | R001 | core-capability | active | M001/S01 | none | mapped |
 | R002 | quality-attribute | active | M001/S01 | M001/S02 | mapped |
 | R003 | differentiator | active | M001/S01 | none | mapped |
-| R004 | constraint | active | M001/S01 | none | mapped |
-| R005 | quality-attribute | active | M001/S01 | none | mapped |
+| R004 | constraint | active | M001/S01 | M002/S01~S05 | mapped |
+| R005 | quality-attribute | active | M001/S01 | M002/S01 | mapped |
 | R006 | primary-user-loop | active | M001/S01 | none | mapped |
 | R007 | quality-attribute | active | M001/S01 | none | mapped |
 | R008 | launchability | active | M001/S01 | none | mapped |
 | R009 | quality-attribute | active | M001/S02 | none | mapped |
 | R010 | quality-attribute | active | M001/S02 | none | mapped |
 | R011 | operability | active | M001/S02 | none | mapped |
+| R012 | core-capability | active | M002/S01 | M002/S02~S05 | mapped |
+| R013 | quality-attribute | active | M002/S02 | M002/S03~S05 | mapped |
+| R014 | primary-user-loop | active | M002/S01 | M002/S02~S04 | mapped |
+| R015 | quality-attribute | active | M002/S02 | M002/S03~S04 | mapped |
+| R016 | constraint | active | M002/S02 | M002/S03~S04 | mapped |
+| R017 | quality-attribute | active | M002/S01 | none | mapped |
+| R018 | quality-attribute | active | M002/S05 | none | mapped |
 
 ## Coverage Summary
 
-- Active requirements: 11
-- Mapped to slices: 11
+- Active requirements: 18
+- Mapped to slices: 18
 - Validated: 0
 - Unmapped active requirements: 0
