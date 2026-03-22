@@ -120,3 +120,15 @@ google-analytics-credentials.json
 site/public/
 site/resources/_gen/
 site/.hugo_build.lock
+
+# ── GSD baseline (auto-generated) ──
+.gsd
+*.code-workspace
+.env.*
+!.env.example
+.next/
+*.pyc
+target/
+vendor/
+coverage/
+.cache/

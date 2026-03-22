@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:research.com)",
+      "WebFetch(domain:brunch.co.kr)",
+      "WebFetch(domain:www.nature.com)",
+      "WebFetch(domain:www.insidehighered.com)",
+      "WebFetch(domain:munch.press)"
+    ]
+  }
+}
