@@ -28,7 +28,7 @@ seo:
 
 ## 사전 준비
 
-필요한 것:
+준비물:
 - Python 3.10 이상
 - Anthropic API 키
 - `anthropic` Python SDK
@@ -167,7 +167,7 @@ def is_path_allowed(path):
 
 ### 사람 개입
 
-위험한 작업(파일 삭제, 외부 API 호출)은 사람의 승인을 요구합니다:
+위험한 작업(파일 삭제, 외부 API 호출)에는 사람의 승인이 필요합니다:
 
 ```python
 DANGEROUS_TOOLS = ["delete_file", "execute_command"]
