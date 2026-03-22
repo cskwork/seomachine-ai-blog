@@ -1,0 +1,13 @@
+```
+PR 생성
+  ↓
+GitHub Actions / GitLab CI 트리거
+  ↓
+변경된 파일 diff 추출
+  ↓
+LLM API로 코드 리뷰 요청
+  ↓
+리뷰 결과를 PR 코멘트로 게시
+  ↓
+심각도 기반 승인/거부 판단
+```

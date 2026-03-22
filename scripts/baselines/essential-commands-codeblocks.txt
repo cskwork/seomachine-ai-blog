@@ -1,0 +1,101 @@
+```
+> /help
+```
+```
+> /clear
+```
+```
+> /compact
+```
+```
+> /config
+```
+```
+> /init
+```
+```
+# Ctrl+O 활성화 후 Extended Thinking과 함께 사용
+> 이 알고리즘의 시간 복잡도를 분석해줘
+
+[thinking]
+배열의 크기를 n이라 할 때, 외부 루프는 n번 실행되고...
+[/thinking]
+
+이 알고리즘의 시간 복잡도는 O(n²)입니다...
+```
+```
+> src/auth/middleware.ts 파일을 읽어줘
+```
+```
+> 이 함수에서 null 참조 에러가 발생하고 있어. 원인을 찾고 수정해줘
+
+function getUserName(user) {
+  return user.profile.name.trim();
+}
+```
+```
+> src/ 디렉토리에서 TODO 주석을 모두 찾아줘
+```
+```
+> "deprecated" 키워드가 포함된 파일을 찾아줘
+```
+```
+> **/*.test.ts 패턴에 맞는 테스트 파일을 모두 찾아줘
+```
+```
+> src/components/ 아래에 있는 모든 React 컴포넌트 파일을 나열해줘
+```
+```
+> utils/format.ts에서 formatDate 함수의 날짜 포맷을 'YYYY-MM-DD'에서 'DD/MM/YYYY'로 변경해줘
+```
+```
+> calculateTax 함수에 대한 단위 테스트를 먼저 작성하고, 그 다음 구현 코드를 만들어줘
+```
+```
+> git diff를 보고 적절한 커밋 메시지를 만들어줘
+```
+```
+> 스테이징된 변경사항을 분석하고 컨벤셔널 커밋 형식으로 커밋해줘
+```
+```
+> 다음 에러 로그를 분석하고 원인과 해결책을 알려줘
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at ProductList.render (ProductList.jsx:42:23)
+    at processChild (/node_modules/react-dom/...)
+```
+```
+> npm run build를 실행하고 에러가 있으면 수정해줘
+```
+```
+> eslint를 실행하고 자동 수정 가능한 이슈는 바로 고쳐줘
+```
+```
+> 이 PR의 변경사항을 리뷰해줘. 버그, 성능 이슈, 코드 스타일 문제를 중점으로 봐줘
+```
+```
+> git diff main...HEAD를 기준으로 보안 취약점이 있는지 확인해줘
+```
+```
+# 1단계: 에러 분석
+> 다음 에러 로그를 분석해줘: [에러 붙여넣기]
+
+# 2단계: 관련 코드 조회
+> 에러가 발생한 파일을 읽고 문제 부분을 찾아줘
+
+# 3단계: 수정 적용
+> 원인을 수정하고 테스트를 실행해서 해결됐는지 확인해줘
+```
+```
+# 1단계: 패턴 파악
+> 코드베이스에서 any 타입을 사용하는 파일을 모두 찾아줘
+
+# 2단계: 우선순위 결정
+> 찾은 파일들 중 수정이 가장 간단한 것부터 우선순위를 매겨줘
+
+# 3단계: 순차 수정
+> users.service.ts부터 any를 적절한 타입으로 교체해줘
+
+# 4단계: 검증
+> 변경 후 타입 에러가 없는지 확인하고 테스트를 실행해줘
+```

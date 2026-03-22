@@ -1,0 +1,62 @@
+```
+.claude/
+└── agents/
+    ├── code-reviewer.md
+    ├── security-reviewer.md
+    ├── tdd-guide.md
+    └── refactor-cleaner.md
+```
+```
+오케스트레이터
+├── 에이전트 A: src/components/Button.tsx 수정
+├── 에이전트 B: src/components/Input.tsx 수정
+├── 에이전트 C: src/components/Modal.tsx 수정
+└── 에이전트 D: src/components/Table.tsx 수정
+```
+```
+1단계: 리서치 에이전트
+   - 전체 코드베이스에서 에러 핸들링 패턴 탐색
+   - 중복된 패턴, 불일치한 방식, 개선 포인트 정리
+   - 결과: 2페이지 분석 보고서 반환
+
+2단계: 구현 에이전트 (분석 보고서 기반)
+   - 통일된 에러 핸들링 패턴 적용
+```
+```
+코드 변경 diff
+├── 에이전트 A (security-reviewer): 인증/인가, 입력 검증, 취약점 분석
+├── 에이전트 B (performance-reviewer): N+1 쿼리, 불필요한 연산, 캐싱 기회
+└── 에이전트 C (convention-reviewer): 네이밍, 파일 구조, 코딩 스타일
+```
+```
+main session (main branch)
+├── agent A → worktree: feature-auth
+│   └── /tmp/worktree-a/ (독립된 레포 사본)
+├── agent B → worktree: feature-api
+│   └── /tmp/worktree-b/ (독립된 레포 사본)
+└── agent C → worktree: feature-tests
+    └── /tmp/worktree-c/ (독립된 레포 사본)
+```
+```
+분석 결과:
+- routes/: try-catch가 없거나 일관성 없는 res.status() 사용 (12개 파일)
+- services/: 에러를 문자열로 throw하거나 console.error로 묻어버림 (8개 파일)
+- middleware/: 글로벌 에러 핸들러 없음, 에러가 Express 기본 핸들러로 전달됨
+```
+```
+에이전트 A (worktree: refactor-routes)
+  담당: routes/ 디렉토리 12개 파일
+  목표: 모든 route handler에 try-catch 추가,
+        에러 발생 시 next(error) 호출로 통일
+
+에이전트 B (worktree: refactor-services)
+  담당: services/ 디렉토리 8개 파일
+  목표: 커스텀 에러 클래스(AppError, ValidationError, NotFoundError) 적용,
+        문자열 throw를 에러 클래스 인스턴스로 교체
+
+에이전트 C (worktree: refactor-middleware)
+  담당: middleware/ 디렉토리
+  목표: 글로벌 에러 핸들러 미들웨어 구현,
+        에러 타입별 HTTP 상태 코드 매핑,
+        개발/운영 환경별 에러 응답 형식 분리
+```

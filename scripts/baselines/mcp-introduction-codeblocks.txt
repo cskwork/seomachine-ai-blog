@@ -1,0 +1,29 @@
+```python
+from mcp.server.fastmcp import FastMCP
+
+mcp = FastMCP("weather-server")
+
+@mcp.tool()
+def get_weather(city: str) -> str:
+    """지정된 도시의 현재 날씨를 반환합니다."""
+    # 실제 구현에서는 날씨 API 호출
+    return f"{city}의 현재 기온은 18도, 맑음입니다."
+
+@mcp.resource("weather://{city}/forecast")
+def get_forecast(city: str) -> str:
+    """도시의 주간 날씨 예보를 반환합니다."""
+    return f"{city}의 주간 예보: 월-수 맑음, 목-금 흐림"
+```
+```typescript
+import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { z } from "zod";
+
+const server = new McpServer({ name: "weather-server", version: "1.0.0" });
+
+server.tool("get_weather",
+  { city: z.string().describe("도시 이름") },
+  async ({ city }) => ({
+    content: [{ type: "text", text: `${city}: 18도, 맑음` }]
+  })
+);
+```

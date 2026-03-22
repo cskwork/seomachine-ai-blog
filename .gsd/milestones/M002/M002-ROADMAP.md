@@ -49,16 +49,16 @@ This milestone is complete only when all are true:
 - [x] **S01: 톤 가이드 수립 + 3 파일럿 리라이트** `risk:high` `depends:[]`
   > After this: 톤 가이드 문서 완성 + 3개 대표 글(기술해설/비교분석/튜토리얼)이 새 톤으로 리라이트됨. brand-voice.md, style-guide.md 업데이트 완료.
 
-- [ ] **S02: Claude Code 시리즈 리라이트 (9개)** `risk:low` `depends:[S01]`
+- [x] **S02: Claude Code 시리즈 리라이트 (9개)** `risk:low` `depends:[S01]`
   > After this: Claude Code 시리즈 9개 글(getting-started, essential-commands, project-setup, claude-md-guide, context-management, custom-commands, hooks-automation, mcp-servers, tdd-workflow)이 통일 톤으로 리라이트됨.
 
-- [ ] **S03: AI 기술 해설 리라이트 (6개)** `risk:low` `depends:[S01]`
+- [x] **S03: AI 기술 해설 리라이트 (6개)** `risk:low` `depends:[S01]`
   > After this: AI 기술 해설 6개 글(multi-agent, mcp-introduction, rag-pipeline, prompt-engineering, llm-cost-optimization, ai-code-review)이 통일 톤으로 리라이트됨.
 
-- [ ] **S04: 비교/전략/디자인/특수글 리라이트 (8개)** `risk:medium` `depends:[S01]`
+- [x] **S04: 비교/전략/디자인/특수글 리라이트 (8개)** `risk:medium` `depends:[S01]`
   > After this: 비교분석 2개(fine-tuning-vs-rag, langchain-vs-llamaindex), 전략/가이드 2개(ai-seo-content-strategy, ai-hack-camp), 디자인 3개(designers, claude-code-reshaping, figma-mcp-playbook, claude-code-to-figma), 멀티에이전트(multi-agent-architecture — S03과 분류 조정 가능) 등 8개 글이 통일 톤으로 리라이트됨.
 
-- [ ] **S05: study-motivation 보정 + 전체 QA** `risk:low` `depends:[S02,S03,S04]`
+- [x] **S05: study-motivation 보정 + 전체 QA** `risk:low` `depends:[S02,S03,S04]`
   > After this: study-motivation 글이 톤 통일되면서 서사 강점 보존. 28개 전체 글의 톤/구조 일관성 최종 검증 완료.
 
 ## Boundary Map

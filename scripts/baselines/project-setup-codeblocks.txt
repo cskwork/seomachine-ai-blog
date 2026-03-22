@@ -1,0 +1,119 @@
+```bash
+cd /path/to/your-project
+claude
+```
+```
+> /init
+```
+```markdown
+# Project Name
+
+## Build & Development Commands
+- `npm run dev` - 개발 서버 실행
+- `npm run build` - 프로덕션 빌드
+- `npm test` - 테스트 실행
+- `npm run lint` - 린트 검사
+
+## Architecture Overview
+프로젝트 구조와 각 디렉토리의 역할 설명...
+
+## Coding Conventions
+코드 스타일, 네이밍 컨벤션, 파일 구성 원칙...
+
+## Key Files and Directories
+- `src/` - 소스 코드
+- `tests/` - 테스트 파일
+- `docs/` - 문서
+```
+```json
+{
+  "allowedTools": [
+    "Bash",
+    "Read",
+    "Write",
+    "Edit",
+    "Grep",
+    "Glob"
+  ],
+  "mcpServers": {
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": {
+        "POSTGRES_CONNECTION_STRING": "${POSTGRES_URL}"
+      }
+    }
+  }
+}
+```
+```
+.claude/
+  commands/
+    deploy.md
+    review.md
+    migrate.md
+```
+```markdown
+## Key Directories
+- `src/` - 핵심 소스 코드 (여기에 집중)
+- `tests/` - 테스트 파일
+- `docs/` - 문서
+
+## 무시해도 되는 디렉토리
+- `node_modules/`, `dist/`, `build/` - 빌드 산출물
+- `data/raw/` - 대용량 데이터 (분석 불필요)
+```
+```markdown
+# My Tool
+
+## Commands
+- `npm run dev` - 개발 서버
+- `npm test` - 테스트
+- `npm run build` - 빌드
+
+## Stack
+- Node.js 20, TypeScript 5, Vitest
+
+## Key Convention
+- 함수형 스타일 선호, 클래스 사용 최소화
+- 에러는 Result 타입으로 처리
+```
+```markdown
+# Service Name
+
+## Architecture
+- Frontend: React 18 + Vite (src/frontend/)
+- Backend: Fastify + Prisma (src/backend/)
+- 공유 타입: packages/shared/
+
+## Commands
+- `pnpm dev` - 전체 개발 서버 (frontend + backend 동시)
+- `pnpm test` - 전체 테스트
+- `pnpm test:unit` - 단위 테스트만
+- `pnpm test:e2e` - E2E 테스트 (Playwright)
+- `pnpm build` - 프로덕션 빌드
+
+## Key Directories
+- `src/backend/routes/` - API 엔드포인트
+- `src/backend/services/` - 비즈니스 로직
+- `src/backend/repositories/` - 데이터 접근 레이어
+- `src/frontend/components/` - UI 컴포넌트
+- `src/frontend/hooks/` - 커스텀 훅
+
+## Coding Conventions
+- Repository 패턴 엄수: 비즈니스 로직은 services/에만
+- API 응답은 반드시 { success, data, error } 형태
+- 컴포넌트는 200줄 미만으로 유지
+- 테스트 커버리지 80% 이상 유지
+```
+```
+monorepo/
+  CLAUDE.md              # 전체 구조, 공통 명령
+  packages/
+    api/
+      CLAUDE.md          # API 패키지 전용 설정
+    web/
+      CLAUDE.md          # 웹 패키지 전용 설정
+    shared/
+      CLAUDE.md          # 공유 라이브러리 설정
+```

@@ -1,0 +1,10 @@
+```bash
+claude mcp add --transport sse figma-dev-mode-mcp-server http://127.0.0.1:3845/sse
+```
+```
+Figma에서 디자인
+  → Claude Code로 코드 생성
+    → 작동하는 UI를 다시 Figma로 캡처
+      → 캔버스에서 다듬기
+        → 수정사항을 코드로 반영
+```

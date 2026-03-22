@@ -1,0 +1,19 @@
+```bash
+claude mcp add figma -e FIGMA_PERSONAL_ACCESS_TOKEN=figd_xxxxxxxxxx
+```
+```
+예: primary-blue → --color-primary: #2563EB
+    body-text → font-size: 16px, line-height: 1.6
+```
+```
+이 Figma 디자인을 분석하고 코드로 변환해줘:
+[Figma URL 붙여넣기]
+
+기술 스택: Next.js 14 + Tailwind CSS + TypeScript
+
+다음 순서로 진행해줘:
+1. 전체 디자인 구조 분석
+2. 디자인 토큰 추출 → Tailwind 설정 생성
+3. 섹션별 컴포넌트 생성
+4. 반응형 레이아웃 적용
+```

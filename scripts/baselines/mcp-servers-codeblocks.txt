@@ -1,0 +1,80 @@
+```json
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"],
+      "type": "stdio"
+    }
+  }
+}
+```
+```python
+from mcp.server.fastmcp import FastMCP
+import requests
+
+mcp = FastMCP("my-tools")
+
+@mcp.tool()
+def check_service_health(service_name: str) -> str:
+    """지정한 서비스의 헬스 상태를 확인합니다."""
+    try:
+        response = requests.get(
+            f"https://api.example.com/{service_name}/health",
+            timeout=5
+        )
+        if response.status_code == 200:
+            return f"{service_name}: 정상 (200)"
+        else:
+            return f"{service_name}: 이상 감지 ({response.status_code})"
+    except requests.exceptions.Timeout:
+        return f"{service_name}: 타임아웃 - 서버가 응답하지 않습니다"
+    except Exception as e:
+        return f"{service_name}: 연결 실패 - {str(e)}"
+
+@mcp.tool()
+def list_recent_deployments(environment: str, limit: int = 5) -> str:
+    """최근 배포 이력을 조회합니다."""
+    # 실제 배포 시스템 API 호출
+    response = requests.get(
+        f"https://deploy.example.com/api/deployments",
+        params={"env": environment, "limit": limit}
+    )
+    deployments = response.json()
+    result = [f"환경: {environment} 최근 {limit}건"]
+    for d in deployments:
+        result.append(f"  - {d['version']} ({d['deployed_at']}): {d['status']}")
+    return "\n".join(result)
+
+if __name__ == "__main__":
+    mcp.run()
+```
+```json
+{
+  "mcpServers": {
+    "my-tools": {
+      "command": "python",
+      "args": ["/path/to/server.py"],
+      "type": "stdio"
+    }
+  }
+}
+```
+```json
+{
+  "mcpServers": {
+    "my-db": {
+      "command": "npx",
+      "args": ["-y", "@some/postgres-mcp"],
+      "type": "stdio",
+      "env": {
+        "DATABASE_URL": "${DATABASE_URL}"
+      }
+    }
+  }
+}
+```
+```bash
+# 서버 직접 실행해서 오류 확인
+python /path/to/server.py
+```
