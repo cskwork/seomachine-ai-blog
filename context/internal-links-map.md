@@ -23,6 +23,7 @@
 | LangChain vs LlamaIndex 비교 | /posts/langchain-vs-llamaindex/ | LangChain, LlamaIndex | 프레임워크, RAG |
 | AI 기반 SEO 콘텐츠 전략 | /posts/ai-seo-content-strategy/ | SEO 콘텐츠 | 키워드, 토픽 클러스터 |
 | 파인튜닝 vs RAG 비교 | /posts/fine-tuning-vs-rag/ | 파인튜닝, RAG | 모델 커스터마이징 |
+| 공부 동기부여 방법: 뇌과학이 증명한 7가지 전략 | /posts/study-motivation-scientific-methods/ | 공부 동기부여, 학습 심리학 | 도파민, 습관 형성, 자기결정이론, 포모도로 |
 
 ## 링크 규칙
 - 글당 내부 링크 3-5개
