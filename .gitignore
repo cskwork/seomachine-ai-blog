@@ -122,7 +122,6 @@ site/resources/_gen/
 site/.hugo_build.lock
 
 # ── GSD baseline (auto-generated) ──
-.gsd
 *.code-workspace
 .env.*
 !.env.example
