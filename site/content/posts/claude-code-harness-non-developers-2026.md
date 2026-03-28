@@ -1,6 +1,6 @@
 ---
 title: "Claude Code를 마케터와 PM이 쓸 수 있다? 비개발자용 Harness & Skill Pack 완전 가이드 (2026)"
-date: 2026-03-28
+date: 2026-03-28T18:00:00+09:00
 draft: false
 tags: ["Claude Code", "마케터", "PM", "비개발자", "Harness", "Skill Pack", "Vibe Coding", "AI 마케팅"]
 categories: ["실전 가이드"]
