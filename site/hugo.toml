@@ -3,6 +3,7 @@ languageCode = "ko"
 title = "AI Insights Lab"
 theme = "PaperMod"
 paginate = 10
+enableGitInfo = true
 
 [params]
   env = "production"
@@ -43,6 +44,10 @@ paginate = 10
   threshold = 0.4
   minMatchCharLength = 0
   keys = ["title", "permalink", "summary", "content"]
+
+[frontmatter]
+  date = ["date", ":default"]
+  lastmod = [":git", "lastmod", "date"]
 
 [markup]
   [markup.highlight]
