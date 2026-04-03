@@ -25,6 +25,7 @@
 | 파인튜닝 vs RAG 비교 | /posts/fine-tuning-vs-rag/ | 파인튜닝, RAG | 모델 커스터마이징 |
 | 공부 동기부여 방법: 뇌과학이 증명한 7가지 전략 | /posts/study-motivation-scientific-methods/ | 공부 동기부여, 학습 심리학 | 도파민, 습관 형성, 자기결정이론, 포모도로 |
 | Claude Mythos 유출 정리: Anthropic 역대 최강 AI 모델 | /posts/claude-mythos-anthropic-leak-2026/ | Claude Mythos, Capybara | 사이버보안 AI, Anthropic, 모델 유출 |
+| 멀티 에이전트 팀 완전 가이드: 10개 프레임워크 비교 | /posts/multi-agent-team-development-guide-2026/ | 멀티 에이전트 팀, 에이전트 오케스트레이션 | CrewAI, AutoGen, LangGraph, MetaGPT, Claude Code Agent Teams |
 
 ## 링크 규칙
 - 글당 내부 링크 3-5개
